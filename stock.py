@@ -6,7 +6,7 @@ def return_ratio_with_dividends_considered(growth_ratio=0.1, yield_ratio=0.03, y
 
     start_capital = stock * price
 
-    while (years > 0):
+    while years > 0:
         # price after one year
         price = price * (1 + growth_ratio)
 
