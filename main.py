@@ -1,8 +1,7 @@
-import pandas
-from item_name import ItemName
+from .intrinsic_value import intrinsic_value
 
-df = pandas.read_csv('data/zcfzb000002.csv', index_col='报告日期')
-
-print(df.columns)
-for i in df.index:
-    print(i)
+intrisinc_v = intrinsic_value(estimates=[500 * 1.1 ** (i + 1) for i in range(9)],
+                              forever=500 * 1.1 ** 10,
+                              discount=0.10,
+                              forever_inc_ratio=0.03)
+print(intrisinc_v)
